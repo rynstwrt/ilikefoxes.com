@@ -1,3 +1,8 @@
+@import "colors";
+@import "fonts";
+@import "breakpoints";
+
+
 *
 {
     margin: 0;
@@ -15,13 +20,95 @@ html, body
 
 body
 {
+    background-color: $background;
+    color: $text;
+    font-family: $font-content;
+    font-weight: $font-content-regular;
+}
+
+
+#particles
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .4;
+}
+
+
+main
+{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+header
+{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #131313;
-    color: #FF6600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    font-size: 15px;
+    flex-direction: column;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(0,0,0,.25) 20%, rgba(0,212,255,0) 84%);
+
+    h1
+    {
+        font-family: $font-header;
+        font-weight: $font-header-regular;
+        font-size: 33px;
+        letter-spacing: 1px;
+        color: $accent;
+    }
+}
+
+
+section
+{
+    &#landing-section
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        text-transform: uppercase;
+
+        img
+        {
+            width: 150px;
+        }
+
+        & > div
+        {
+            margin-top: 30px;
+
+            p
+            {
+                letter-spacing: 1px;
+                text-align: center;
+
+                &#ip-text
+                {
+                    font-weight: $font-content-semibold;
+                    font-size: 18px;
+
+                    span#ip
+                    {
+                        font-weight: $font-content-bold;
+                        color: $accent;
+                    }
+                }
+
+                &:not(#ip-text)
+                {
+                    font-size: 12px;
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
 }
