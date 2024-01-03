@@ -45,9 +45,12 @@
     <!--  STYLESHEETS  -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <!--  SCRIPTS  -->
+    <!--  LIBRARY SCRIPTS  -->
     <script src="js/lib/particles.js"></script>
-    <script src="js/particle-handler.js" defer></script>
+
+    <!--  SCRIPTS  -->
+    <script src="js/particle-handler.js"></script>
+    <script src="js/copy-ip.js" defer></script>
 </head>
 <body>
     <div id="particles"></div>
@@ -59,16 +62,17 @@
 
     <section id="landing-section">
         <img src="assets/images/logo.png" alt="FoxCraft logo">
-        <div>
+        <div id="landing-ip-section">
             <p id="ip-text">Server IP: <span id="ip">play.ilovefoxes.com</span></p>
-            <p>(Click to copy)</p>
+            <p id="copy-text">(Click to copy)</p>
         </div>
     </section>
 
     <!--
         TODO: Vote links
-        TODO: leaderboards
-        TODO:
+        TODO: Leaderboards
+        TODO: Contact/support
+        TODO: Store
     -->
 
     <main>

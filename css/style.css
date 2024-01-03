@@ -58,22 +58,26 @@ section#landing-section {
 section#landing-section img {
   width: 150px;
 }
-section#landing-section > div {
+section#landing-section #landing-ip-section {
   margin-top: 30px;
 }
-section#landing-section > div p {
+section#landing-section #landing-ip-section:hover {
+  cursor: pointer;
+}
+section#landing-section #landing-ip-section p {
   letter-spacing: 1px;
   text-align: center;
+  user-select: none;
 }
-section#landing-section > div p#ip-text {
+section#landing-section #landing-ip-section p#ip-text {
   font-weight: 600;
   font-size: 18px;
 }
-section#landing-section > div p#ip-text span#ip {
+section#landing-section #landing-ip-section p#ip-text span#ip {
   font-weight: 700;
   color: #fc751d;
 }
-section#landing-section > div p:not(#ip-text) {
+section#landing-section #landing-ip-section p#copy-text {
   font-size: 12px;
   margin-top: 3px;
 }

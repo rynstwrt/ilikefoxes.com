@@ -82,14 +82,20 @@ section
             width: 150px;
         }
 
-        & > div
+        #landing-ip-section
         {
             margin-top: 30px;
+
+            &:hover
+            {
+                cursor: pointer;
+            }
 
             p
             {
                 letter-spacing: 1px;
                 text-align: center;
+                user-select: none;
 
                 &#ip-text
                 {
@@ -103,7 +109,7 @@ section
                     }
                 }
 
-                &:not(#ip-text)
+                &#copy-text
                 {
                     font-size: 12px;
                     margin-top: 3px;
