@@ -54,63 +54,6 @@
     <script src="js/pagination.js" defer></script>
 </head>
 <body>
-    <div id="particles"></div>
-
-    <header>
-        <div id="header-title">
-            <h1>FoxCraft</h1>
-            <p>A furry Minecraft server.</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#" class="selected">Home</a></li>
-<!--                <li><a href="#">About</a></li>-->
-                <li><a href="#">Vote</a></li>
-                <li><a href="#">Store</a></li>
-<!--                <li><a href="#">Contact</a></li>-->
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div id="home-page" class="page active">
-            <img src="assets/images/logo.png" alt="FoxCraft logo">
-            <div id="landing-ip-section">
-                <p id="ip-text">Server IP: <span id="ip">play.ilikefoxes.com</span></p>
-                <p id="copy-text">(Click to copy)</p>
-            </div>
-        </div>
-
-        <div id="vote-page" class="page">
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><a href="#">Coming Soon!</a></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><a href="#">Coming Soon!</a></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td><a href="#">Coming Soon!</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div id="store-page" class="page">
-            <a id="store-button" href="https://foxcraftmc.craftingstore.net/" target="_blank">Visit Our Webstore</a>
-        </div>
-    </main>
-
     <!--
         TODO: About
         TODO: Vote links
@@ -119,5 +62,83 @@
         TODO: Store
         TODO: Contact/support
     -->
+
+    <div id="particles"></div>
+
+    <section id="landing">
+        <img src="assets/images/logo.png" alt="FoxCraft logo">
+        <h1>FoxCraft</h1>
+        <p>A furry Minecraft server.</p>
+        <div id="down-chevron">
+            <img src="assets/images/chevron-down-solid.svg" alt="Down chevron">
+        </div>
+<!--        <nav>-->
+<!--            <ul>-->
+<!--                <li><a href="#">About</a></li>-->
+<!--                <li><a href="#">Vote</a></li>-->
+<!--                <li><a href="#">Rules</a></li>-->
+<!--                <li><a href="#">Store</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+    </section>
+
+    <section id="about">
+        <h3>About</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et purus malesuada, iaculis metus ut, ultrices justo. Curabitur eget nisi a metus tincidunt venenatis. Curabitur dictum, quam non eleifend feugiat, leo erat tincidunt leo, sed tempus odio lorem a mi. Praesent turpis erat, tristique in tempus sit amet, sollicitudin at nibh. Ut vel orci imperdiet, scelerisque mi ac, venenatis ex. Pellentesque lobortis metus lacus, ac fringilla massa vehicula et. Curabitur sem nunc, molestie non lacus ut, tristique pellentesque turpis. Vivamus blandit, dui ut pellentesque porttitor, ex nisi interdum mi, eu ultrices ex mi nec quam. Vivamus gravida fringilla vestibulum. Maecenas tincidunt luctus bibendum. Nulla et euismod nunc. Aliquam quis vestibulum lorem. Etiam enim neque, accumsan eu fermentum nec, gravida at velit. Donec pulvinar sem nec massa maximus tristique.</p>
+    </section>
+
+    <section id="rules">
+        <h3>Rules</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rule:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rule 1</td>
+                </tr>
+                <tr>
+                    <td>Rule 1</td>
+                </tr>
+                <tr>
+                    <td>Rule 1</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="vote">
+        <h3>Vote</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Vote Site:</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="#">Vote Site 1</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">Vote Site 1</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">Vote Site 1</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+<!--    <section id="gallery">-->
+<!--        <h3>Gallery</h3>-->
+<!--    </section>-->
+
+    <section id="store">
+        <h3>Store</h3>
+
+        <a href="#" target="_blank">Go to FoxCraft's Shop</a>
+    </section>
 </body>
 </html>
