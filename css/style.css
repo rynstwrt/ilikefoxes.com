@@ -1,3 +1,11 @@
+@keyframes breathe {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -27,16 +35,61 @@ body {
 }
 
 header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 20%, rgba(0, 212, 255, 0) 84%);
+  z-index: 200;
 }
 header #header-title h1 {
   font-family: "Pixelify Sans", sans-serif;
   font-weight: 400;
   font-size: 33px;
   letter-spacing: 1px;
+  color: #fc751d;
+}
+header nav > ul {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 500px) {
+  header nav > ul {
+    flex-direction: row;
+  }
+}
+header nav > ul li {
+  list-style: none;
+  text-align: right;
+}
+header nav > ul li:not(header nav > ul li:first-of-type) {
+  margin-top: 7px;
+}
+@media (min-width: 500px) {
+  header nav > ul li:not(header nav > ul li:first-of-type) {
+    margin-left: 10px;
+    margin-top: 0;
+  }
+}
+header nav > ul li a {
+  color: #e7e7e7;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: color 0.1s ease-in-out;
+}
+header nav > ul li a.active {
+  text-decoration: underline;
+  text-decoration-color: #fc751d;
+  text-underline-offset: 4px;
+}
+header nav > ul li a:hover {
   color: #fc751d;
 }
 
@@ -51,9 +104,11 @@ main {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  z-index: 1;
 }
 main img {
   width: 150px;
+  animation: breathe 1.7s ease-in-out 0s infinite alternate-reverse;
 }
 main #landing-ip-section {
   margin-top: 30px;
