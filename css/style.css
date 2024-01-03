@@ -26,20 +26,13 @@ body {
   opacity: 0.3;
 }
 
-main {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 30px;
-}
-
 header {
   display: flex;
   flex-direction: column;
   padding: 20px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 20%, rgba(0, 212, 255, 0) 84%);
 }
-header h1 {
+header #header-title h1 {
   font-family: "Pixelify Sans", sans-serif;
   font-weight: 400;
   font-size: 33px;
@@ -47,37 +40,41 @@ header h1 {
   color: #fc751d;
 }
 
-section#landing-section {
+main {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 400px;
   text-transform: uppercase;
 }
-section#landing-section img {
+main img {
   width: 150px;
 }
-section#landing-section #landing-ip-section {
+main #landing-ip-section {
   margin-top: 30px;
 }
-section#landing-section #landing-ip-section:hover {
+main #landing-ip-section:hover {
   cursor: pointer;
 }
-section#landing-section #landing-ip-section p {
+main #landing-ip-section p {
   letter-spacing: 1px;
   text-align: center;
   user-select: none;
 }
-section#landing-section #landing-ip-section p#ip-text {
+main #landing-ip-section p#ip-text {
   font-weight: 600;
   font-size: 18px;
 }
-section#landing-section #landing-ip-section p#ip-text span#ip {
+main #landing-ip-section p#ip-text span#ip {
   font-weight: 700;
   color: #fc751d;
 }
-section#landing-section #landing-ip-section p#copy-text {
+main #landing-ip-section p#copy-text {
   font-size: 12px;
   margin-top: 3px;
 }

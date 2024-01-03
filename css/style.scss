@@ -39,15 +39,6 @@ body
 }
 
 
-main
-{
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 30px;
-}
-
-
 header
 {
     display: flex;
@@ -55,65 +46,69 @@ header
     padding: 20px;
     background: linear-gradient(180deg, rgba(0,0,0,.25) 20%, rgba(0,212,255,0) 84%);
 
-    h1
+    #header-title
     {
-        font-family: $font-header;
-        font-weight: $font-header-regular;
-        font-size: 33px;
-        letter-spacing: 1px;
-        color: $accent;
+        h1
+        {
+            font-family: $font-header;
+            font-weight: $font-header-regular;
+            font-size: 33px;
+            letter-spacing: 1px;
+            color: $accent;
+        }
     }
 }
 
 
-section
+main
 {
-    &#landing-section
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 400px;
-        text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
 
-        img
+    img
+    {
+        width: 150px;
+    }
+
+    #landing-ip-section
+    {
+        margin-top: 30px;
+
+        &:hover
         {
-            width: 150px;
+            cursor: pointer;
         }
 
-        #landing-ip-section
+        p
         {
-            margin-top: 30px;
+            letter-spacing: 1px;
+            text-align: center;
+            user-select: none;
 
-            &:hover
+            &#ip-text
             {
-                cursor: pointer;
+                font-weight: $font-content-semibold;
+                font-size: 18px;
+
+                span#ip
+                {
+                    font-weight: $font-content-bold;
+                    color: $accent;
+                }
             }
 
-            p
+            &#copy-text
             {
-                letter-spacing: 1px;
-                text-align: center;
-                user-select: none;
-
-                &#ip-text
-                {
-                    font-weight: $font-content-semibold;
-                    font-size: 18px;
-
-                    span#ip
-                    {
-                        font-weight: $font-content-bold;
-                        color: $accent;
-                    }
-                }
-
-                &#copy-text
-                {
-                    font-size: 12px;
-                    margin-top: 3px;
-                }
+                font-size: 12px;
+                margin-top: 3px;
             }
         }
     }
