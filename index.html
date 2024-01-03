@@ -51,6 +51,7 @@
     <!--  SCRIPTS  -->
     <script src="js/particle-handler.js"></script>
     <script src="js/copy-ip.js" defer></script>
+    <script src="js/pagination.js" defer></script>
 </head>
 <body>
     <div id="particles"></div>
@@ -62,9 +63,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" class="selected">Home</a></li>
+                <li><a href="#">About</a></li>
                 <li><a href="#">Vote</a></li>
-                <li><a href="#">Rules</a></li>
                 <li><a href="#">Store</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -72,16 +73,22 @@
     </header>
 
     <main>
-        <img src="assets/images/logo.png" alt="FoxCraft logo">
-        <div id="landing-ip-section">
-            <p id="ip-text">Server IP: <span id="ip">play.ilovefoxes.com</span></p>
-            <p id="copy-text">(Click to copy)</p>
+        <div id="home-page" class="page active">
+            <img src="assets/images/logo.png" alt="FoxCraft logo">
+            <div id="landing-ip-section">
+                <p id="ip-text">Server IP: <span id="ip">play.ilovefoxes.com</span></p>
+                <p id="copy-text">(Click to copy)</p>
+            </div>
+        </div>
+
+        <div id="about-page" class="page">
+            <p>Coming Soon!</p>
         </div>
     </main>
 
     <!--
+        TODO: About
         TODO: Vote links
-        TODO: Leaderboards
         TODO: Rules
         TODO: Store
         TODO: Contact/support

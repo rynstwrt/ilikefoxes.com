@@ -25,7 +25,7 @@ body {
 }
 
 #particles {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -41,10 +41,9 @@ header {
   left: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 20%, rgba(0, 212, 255, 0) 84%);
-  z-index: 200;
+  z-index: 1;
 }
 header #header-title h1 {
   font-family: "Pixelify Sans", sans-serif;
@@ -84,7 +83,7 @@ header nav > ul li a {
   letter-spacing: 1px;
   transition: color 0.1s ease-in-out;
 }
-header nav > ul li a.active {
+header nav > ul li a.selected {
   text-decoration: underline;
   text-decoration-color: #fc751d;
   text-underline-offset: 4px;
@@ -99,37 +98,53 @@ main {
   right: 0;
   bottom: 0;
   left: 0;
+}
+main .page {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+main .page.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.page#home-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  z-index: 1;
 }
-main img {
+.page#home-page img {
   width: 150px;
   animation: breathe 1.7s ease-in-out 0s infinite alternate-reverse;
 }
-main #landing-ip-section {
+.page#home-page #landing-ip-section {
   margin-top: 30px;
 }
-main #landing-ip-section:hover {
+.page#home-page #landing-ip-section:hover {
   cursor: pointer;
 }
-main #landing-ip-section p {
+.page#home-page #landing-ip-section p {
   letter-spacing: 1px;
   text-align: center;
   user-select: none;
 }
-main #landing-ip-section p#ip-text {
+.page#home-page #landing-ip-section p#ip-text {
   font-weight: 600;
   font-size: 18px;
 }
-main #landing-ip-section p#ip-text span#ip {
+.page#home-page #landing-ip-section p#ip-text span#ip {
   font-weight: 700;
   color: #fc751d;
 }
-main #landing-ip-section p#copy-text {
+.page#home-page #landing-ip-section p#copy-text {
   font-size: 12px;
   margin-top: 3px;
 }
