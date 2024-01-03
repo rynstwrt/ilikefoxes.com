@@ -34,6 +34,18 @@ body
 }
 
 
+a
+{
+    text-decoration: none;
+    transition: color .1s ease-in-out;
+
+    &:hover
+    {
+        color: $accent;
+    }
+}
+
+
 #particles
 {
     position: fixed;
@@ -101,11 +113,9 @@ header
             {
                 color: $text;
                 text-transform: uppercase;
-                text-decoration: none;
                 font-weight: $font-content-light;
                 font-size: 14px;
                 letter-spacing: 1px;
-                transition: color .1s ease-in-out;
 
                 &.selected
                 {
@@ -203,11 +213,59 @@ main
 }
 
 
+.page#vote-page
+{
+    a
+    {
+        color: $accent;
+
+        &:hover
+        {
+            text-decoration: underline;
+        }
+    }
+
+    table
+    {
+        //border: 1px solid red;
+        table-layout: fixed;
+        //border-collapse: collapse;
+
+        tr
+        {
+
+            th, td
+            {
+                //border: 1px solid red;
+                padding: 5px 10px;
+            }
+
+            th
+            {
+                font-weight: $font-content-medium;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                text-align: left;
+            }
+
+            td
+            {
+                font-weight: $font-content-light;
+
+                &:first-of-type
+                {
+                    //text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
 .page#store-page
 {
     a
     {
-        font-family: inherit;
         font-size: 17px;
         padding: 10px 20px;
         border-radius: 4px;
@@ -217,7 +275,6 @@ main
         font-weight: $font-content-light;
         text-transform: uppercase;
         letter-spacing: 2px;
-        text-decoration: none;
 
         &:hover
         {
