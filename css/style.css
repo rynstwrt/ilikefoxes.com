@@ -108,6 +108,10 @@ main .page {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 main .page.active {
   pointer-events: auto;
@@ -115,10 +119,6 @@ main .page.active {
 }
 
 .page#home-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-transform: uppercase;
 }
 .page#home-page img {
@@ -147,6 +147,24 @@ main .page.active {
 .page#home-page #landing-ip-section p#copy-text {
   font-size: 12px;
   margin-top: 3px;
+}
+
+.page#store-page a {
+  font-family: inherit;
+  font-size: 17px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.12);
+  border: 1px solid #fc751d;
+  color: #fc751d;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.page#store-page a:hover {
+  background-color: #fc751d;
+  color: #131313;
 }
 
 /*# sourceMappingURL=style.css.map */

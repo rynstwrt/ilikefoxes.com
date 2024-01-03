@@ -1,12 +1,8 @@
-// const homeButton = document.querySelector("");
-// const aboutButton = document.querySelector("");
-// const voteButton = document.querySelector("");
-// const storeButton = document.querySelector("");
-// const contactButton = document.querySelector("");
-
 const PAGE_MAPPINGS = {
     Home: "home-page",
-    About: "about-page"
+    // About: "about-page"
+    Vote: "vote-page",
+    Store: "store-page"
 };
 
 
