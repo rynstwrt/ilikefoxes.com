@@ -171,6 +171,7 @@ section
     {
         width: 100%;
         border-spacing: 5px;
+        //margin-top: -10px;
 
         tr
         {
@@ -193,8 +194,12 @@ section
             td
             {
                 background-color: lighten($background, 5%);
-
                 font-weight: $font-content-light;
+
+                a
+                {
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -203,6 +208,25 @@ section
     {
 
 
-
     }
 }
+
+
+#store-link-button
+{
+    border: 1px solid $accent;
+    color: $accent;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    max-width: 170px;
+    text-align: center;
+
+    &:hover
+    {
+        background-color: $accent;
+        color: $background;
+    }
+}
+
