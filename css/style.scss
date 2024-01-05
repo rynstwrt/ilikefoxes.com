@@ -172,6 +172,7 @@ section
         width: 100%;
         border-spacing: 5px;
         //margin-top: -10px;
+        max-width: 350px;
 
         tr
         {
@@ -180,15 +181,7 @@ section
                 padding: 5px 10px;
                 letter-spacing: 1px;
                 border-radius: 10px;
-            }
-
-            th
-            {
-                text-align: left;
-                font-weight: $font-content-semibold;
-                text-transform: uppercase;
-                background-color: lighten($background, 10%);
-                font-size: 15px;
+                max-width: 100px;
             }
 
             td
