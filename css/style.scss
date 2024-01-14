@@ -60,6 +60,30 @@ a
 }
 
 
+header
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+
+    nav > ul
+    {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        li
+        {
+            a
+            {
+
+            }
+        }
+    }
+}
+
+
 section
 {
     min-height: 150px;
@@ -120,38 +144,6 @@ section
             font-weight: $font-content-light;
         }
 
-        nav > ul
-        {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-
-            li
-            {
-                margin: 0 7px;
-
-                a
-                {
-                    color: lighten($accent, 20%);
-                    text-transform: uppercase;
-                    font-size: 13px;
-
-                    &:before
-                    {
-                        color: $text;
-                        content: "["
-                    }
-
-                    &:after
-                    {
-                        color: $text;
-                        content: "]"
-                    }
-                }
-            }
-        }
-
         #down-chevron
         {
             position: absolute;
@@ -167,41 +159,6 @@ section
         }
     }
 
-    table
-    {
-        width: 100%;
-        border-spacing: 5px;
-        //margin-top: -10px;
-        max-width: 350px;
-
-        tr
-        {
-            th, td
-            {
-                padding: 5px 10px;
-                letter-spacing: 1px;
-                border-radius: 10px;
-                max-width: 100px;
-            }
-
-            td
-            {
-                background-color: lighten($background, 5%);
-                font-weight: $font-content-light;
-
-                a
-                {
-                    font-size: 15px;
-                }
-            }
-        }
-    }
-
-    &#rules
-    {
-
-
-    }
 }
 
 

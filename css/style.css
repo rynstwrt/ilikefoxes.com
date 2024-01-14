@@ -44,6 +44,17 @@ a:hover {
   opacity: 0.3;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+header nav > ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
 section {
   min-height: 150px;
   padding: 30px;
@@ -88,28 +99,6 @@ section#landing p {
   font-size: 17px;
   font-weight: 300;
 }
-section#landing nav > ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-section#landing nav > ul li {
-  margin: 0 7px;
-}
-section#landing nav > ul li a {
-  color: #fdb282;
-  text-transform: uppercase;
-  font-size: 13px;
-}
-section#landing nav > ul li a:before {
-  color: #e7e7e7;
-  content: "[";
-}
-section#landing nav > ul li a:after {
-  color: #e7e7e7;
-  content: "]";
-}
 section#landing #down-chevron {
   position: absolute;
   bottom: 0;
@@ -120,24 +109,7 @@ section#landing #down-chevron img {
   width: 100%;
   height: 100%;
 }
-section table {
-  width: 100%;
-  border-spacing: 5px;
-  max-width: 350px;
-}
-section table tr th, section table tr td {
-  padding: 5px 10px;
-  letter-spacing: 1px;
-  border-radius: 10px;
-  max-width: 100px;
-}
-section table tr td {
-  background-color: #202020;
-  font-weight: 300;
-}
-section table tr td a {
-  font-size: 15px;
-}
+
 #store-link-button {
   border: 1px solid #fc751d;
   color: #fc751d;
