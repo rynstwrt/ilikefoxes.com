@@ -60,65 +60,6 @@ a
 }
 
 
-header
-{
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 20px;
-
-    nav > ul
-    {
-        display: flex;
-        flex-direction: column;
-
-        @include sm()
-        {
-            flex-direction: row;
-        }
-
-        li
-        {
-            list-style: none;
-            text-align: right;
-
-
-            &:not(&:first-of-type)
-            {
-                margin-top: 7px;
-
-                @include sm()
-                {
-                    margin-left: 10px;
-                    margin-top: 0;
-                }
-            }
-
-            a
-            {
-                color: $text;
-                text-transform: uppercase;
-                font-weight: $font-content-light;
-                font-size: 14px;
-                letter-spacing: 1px;
-
-                //&.selected
-                //{
-                //    text-decoration: underline;
-                //    text-decoration-color: $accent;
-                //    text-underline-offset: 4px;
-                //}
-
-                &:hover
-                {
-                    color: $accent;
-                }
-            }
-        }
-    }
-}
-
-
 section
 {
     padding: 30px;
@@ -217,33 +158,45 @@ section#vote
 }
 
 
-.big-button
+section#store
 {
-    border: 1px solid $accent;
-    color: $accent;
-    padding: 4px 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: block;
-    max-width: 170px;
-    text-align: center;
-    transition: background-color .1s ease-in-out, color .1s ease-in-out;
-
-    &:hover
+    .big-button
     {
-        background-color: $accent;
-        color: $background;
+        border: 1px solid $accent;
+        color: $accent;
+        padding: 4px 10px;
+        border-radius: 6px;
+        margin-top: 10px;
+        display: block;
+        max-width: 170px;
+        text-align: center;
+        transition: background-color .1s ease-in-out, color .1s ease-in-out;
+
+        &:hover
+        {
+            background-color: $accent;
+            color: $background;
+        }
     }
 }
 
 
 section#contact
 {
-    #email
+    p
     {
-        color: $accent;
-        letter-spacing: 1px;
-        margin-left: 3px;
+        margin-bottom: 5px;
+
+        .contact-link
+        {
+            color: $accent;
+            margin-left: 3px;
+
+            &:hover
+            {
+                text-decoration: underline;
+            }
+        }
     }
 }
 

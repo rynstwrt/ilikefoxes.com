@@ -44,45 +44,6 @@ a:hover {
   opacity: 0.3;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 20px;
-}
-header nav > ul {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 500px) {
-  header nav > ul {
-    flex-direction: row;
-  }
-}
-header nav > ul li {
-  list-style: none;
-  text-align: right;
-}
-header nav > ul li:not(header nav > ul li:first-of-type) {
-  margin-top: 7px;
-}
-@media (min-width: 500px) {
-  header nav > ul li:not(header nav > ul li:first-of-type) {
-    margin-left: 10px;
-    margin-top: 0;
-  }
-}
-header nav > ul li a {
-  color: #e7e7e7;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-header nav > ul li a:hover {
-  color: #fc751d;
-}
-
 section {
   padding: 30px;
   min-height: 250px;
@@ -153,26 +114,31 @@ section#vote .vote-site:hover {
   color: #fc751d;
 }
 
-.big-button {
+section#store .big-button {
   border: 1px solid #fc751d;
   color: #fc751d;
   padding: 4px 10px;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 10px;
   display: block;
   max-width: 170px;
   text-align: center;
   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 }
-.big-button:hover {
+section#store .big-button:hover {
   background-color: #fc751d;
   color: #111111;
 }
 
-section#contact #email {
+section#contact p {
+  margin-bottom: 5px;
+}
+section#contact p .contact-link {
   color: #fc751d;
-  letter-spacing: 1px;
   margin-left: 3px;
+}
+section#contact p .contact-link:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
