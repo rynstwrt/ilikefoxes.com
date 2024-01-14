@@ -60,10 +60,27 @@ a
 }
 
 
+.card
+{
+    display: block;
+    background-color: $card;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    max-width: 500px;
+
+    &:hover
+    {
+        color: $accent;
+    }
+}
+
+
 section
 {
     padding: 30px;
-    min-height: 250px;
+    min-height: 35vh;
     margin-bottom: 50px;
 
     h3
@@ -140,21 +157,7 @@ section#landing
 
 section#vote
 {
-    .vote-site
-    {
-        display: block;
-        background-color: $card;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 3px;
-        letter-spacing: 1px;
-        max-width: 500px;
 
-        &:hover
-        {
-            color: $accent;
-        }
-    }
 }
 
 
@@ -167,10 +170,8 @@ section#store
         padding: 4px 10px;
         border-radius: 6px;
         margin-top: 10px;
-        display: block;
         max-width: 170px;
         text-align: center;
-        transition: background-color .1s ease-in-out, color .1s ease-in-out;
 
         &:hover
         {
@@ -183,21 +184,41 @@ section#store
 
 section#contact
 {
-    p
+    .card
     {
-        margin-bottom: 5px;
+        color: $accent;
 
         .contact-link
         {
-            color: $accent;
-            margin-left: 3px;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+            color: white;
+        }
 
-            &:hover
+        &:hover
+        {
+            .contact-link
             {
-                text-decoration: underline;
+                color: $accent;
             }
         }
     }
+    //p
+    //{
+    //    margin-bottom: 5px;
+    //
+    //    .contact-link
+    //    {
+    //        color: $accent;
+    //        margin-left: 3px;
+    //
+    //        &:hover
+    //        {
+    //            text-decoration: underline;
+    //        }
+    //    }
+    //}
 }
 
 

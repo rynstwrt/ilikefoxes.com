@@ -44,9 +44,22 @@ a:hover {
   opacity: 0.3;
 }
 
+.card {
+  display: block;
+  background-color: #1d1d1d;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  max-width: 500px;
+}
+.card:hover {
+  color: #fc751d;
+}
+
 section {
   padding: 30px;
-  min-height: 250px;
+  min-height: 35vh;
   margin-bottom: 50px;
 }
 section h3 {
@@ -101,44 +114,31 @@ section#landing #down-chevron img {
   height: 100%;
 }
 
-section#vote .vote-site {
-  display: block;
-  background-color: #1d1d1d;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  letter-spacing: 1px;
-  max-width: 500px;
-}
-section#vote .vote-site:hover {
-  color: #fc751d;
-}
-
 section#store .big-button {
   border: 1px solid #fc751d;
   color: #fc751d;
   padding: 4px 10px;
   border-radius: 6px;
   margin-top: 10px;
-  display: block;
   max-width: 170px;
   text-align: center;
-  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 section#store .big-button:hover {
   background-color: #fc751d;
   color: #111111;
 }
 
-section#contact p {
-  margin-bottom: 5px;
-}
-section#contact p .contact-link {
+section#contact .card {
   color: #fc751d;
-  margin-left: 3px;
 }
-section#contact p .contact-link:hover {
+section#contact .card .contact-link {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  color: white;
+}
+section#contact .card:hover .contact-link {
+  color: #fc751d;
 }
 
 /*# sourceMappingURL=style.css.map */
