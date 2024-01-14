@@ -5,7 +5,7 @@
 
 @keyframes breathe
 {
-    from { transform: scale(1.05) }
+    from { transform: scale(1.07) }
     to { transform: scale(1) }
 }
 
@@ -16,6 +16,7 @@
     padding: 0;
     border: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 
@@ -38,6 +39,7 @@ a
 {
     text-decoration: none;
     transition: color .1s ease-in-out;
+    color: inherit;
 
     &:hover
     {
@@ -60,27 +62,10 @@ a
 
 header
 {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
     padding: 20px;
-    background: linear-gradient(180deg, rgba(0,0,0,.25) 20%, rgba(0,212,255,0) 84%);
-    z-index: 1;
-
-    #header-title
-    {
-        h1
-        {
-            font-family: $font-header;
-            font-weight: $font-header-regular;
-            font-size: 33px;
-            letter-spacing: 1px;
-            color: $accent;
-        }
-    }
 
     nav > ul
     {
@@ -117,12 +102,12 @@ header
                 font-size: 14px;
                 letter-spacing: 1px;
 
-                &.selected
-                {
-                    text-decoration: underline;
-                    text-decoration-color: $accent;
-                    text-underline-offset: 4px;
-                }
+                //&.selected
+                //{
+                //    text-decoration: underline;
+                //    text-decoration-color: $accent;
+                //    text-underline-offset: 4px;
+                //}
 
                 &:hover
                 {
@@ -134,152 +119,132 @@ header
 }
 
 
-main
+section
 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    padding: 30px;
+    min-height: 250px;
+    margin-bottom: 50px;
 
-    .page
+    h3
     {
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        position: absolute;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity .3s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        color: $accent;
+        text-transform: uppercase;
+        font-weight: $font-content-regular;
+        margin-bottom: 20px;
+        $bracket-color: darken($text, 20%);
 
-        &.active
+        &:before
         {
-            pointer-events: auto;
-            opacity: 1;
+            color: $bracket-color;
+            content: "[ ";
+            font-weight: $font-content-light
+        }
+
+        &:after
+        {
+            color: $bracket-color;
+            content: " ]";
         }
     }
 }
 
 
-.page#home-page
+section#landing
 {
-    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     img
     {
-        width: 150px;
-        animation: breathe 1.7s ease-in-out 0s infinite alternate-reverse;
+        width: 100px;
+        animation: breathe 1.5s ease-in-out 0s infinite alternate-reverse;
     }
 
-    #landing-ip-section
+    h1
     {
-        margin-top: 30px;
-
-        &:hover
-        {
-            cursor: pointer;
-        }
-
-        p
-        {
-            letter-spacing: 1px;
-            text-align: center;
-            user-select: none;
-
-            &#ip-text
-            {
-                font-weight: $font-content-semibold;
-                font-size: 18px;
-
-                span#ip
-                {
-                    font-weight: $font-content-bold;
-                    color: $accent;
-                }
-            }
-
-            &#copy-text
-            {
-                font-size: 12px;
-                margin-top: 3px;
-            }
-        }
-    }
-}
-
-
-.page#vote-page
-{
-    a
-    {
+        font-family: $font-header;
+        font-weight: $font-header-regular;
+        font-size: 35px;
         color: $accent;
-
-        &:hover
-        {
-            text-decoration: underline;
-        }
-    }
-
-    table
-    {
-        //border: 1px solid red;
-        table-layout: fixed;
-        //border-collapse: collapse;
-
-        tr
-        {
-
-            th, td
-            {
-                //border: 1px solid red;
-                //padding: 5px 10px;
-            }
-
-            th
-            {
-                font-weight: $font-content-medium;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                text-align: left;
-            }
-
-            td
-            {
-                font-weight: $font-content-light;
-
-                &:first-of-type
-                {
-                    //text-align: center;
-                }
-            }
-        }
-    }
-}
-
-
-.page#store-page
-{
-    a
-    {
-        font-size: 17px;
-        padding: 10px 20px;
-        border-radius: 4px;
-        background-color: rgba(0, 0, 0, .12);
-        border: 1px solid $accent;
-        color: $accent;
-        font-weight: $font-content-light;
         text-transform: uppercase;
         letter-spacing: 2px;
+        margin-top: 15px;
+    }
 
-        &:hover
+    p
+    {
+        font-size: 17px;
+        font-weight: $font-content-light;
+    }
+
+    #down-chevron
+    {
+        position: absolute;
+        bottom: 0;
+        width: 20px;
+        margin-bottom: 27px;
+
+        img
         {
-            background-color: $accent;
-            color: $background;
+            width: 100%;
+            height: 100%;
         }
     }
 }
+
+
+section#vote
+{
+    .vote-site
+    {
+        display: block;
+        background-color: $card;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        letter-spacing: 1px;
+        max-width: 500px;
+
+        &:hover
+        {
+            color: $accent;
+        }
+    }
+}
+
+
+.big-button
+{
+    border: 1px solid $accent;
+    color: $accent;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    max-width: 170px;
+    text-align: center;
+    transition: background-color .1s ease-in-out, color .1s ease-in-out;
+
+    &:hover
+    {
+        background-color: $accent;
+        color: $background;
+    }
+}
+
+
+section#contact
+{
+    #email
+    {
+        color: $accent;
+        letter-spacing: 1px;
+        margin-left: 3px;
+    }
+}
+
+
