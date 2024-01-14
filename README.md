@@ -1,2 +1,2 @@
 # ilikefoxes.com
- The official website of [FoxCraft](www.ilikefoxes.com)!
+ The official website of [FoxCraft](https://www.ilikefoxes.com)!
